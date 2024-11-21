@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:wght@100..900&display=swap");
+
+ @font-face {
+  font-family:"Pacifico";
+  src: url("./fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Poppins";
+  src: url("./fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+} 
+
+.clear{
+  clear:both;
+}
+body {
+  background-color: #f4a261;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+#mark-form .container {
+  transform: translateX(30%);
+}
+#mark-form button,
+.navbar .drawer-content .btn,main .drawer .btn{
+  background-color: #2a9d8f;
+  color:#264653 ;
+  border: none;
+}
+#mark-form .form-control {
+  width: 60%;
+  margin-bottom: 25px;
+}
+h4{
+  font-size: 1rem;
+}
+
+nav,main .bg-base-200{
+  background-color: #e76f51;
+}
+main {
+  margin-top: 50px;
+}
+
+main .drawer .btn{
+  height: 2.2rem;
+  width:3.5rem;
+  min-height: 2rem;
+  font-size: 10px;
+  line-height: 0em;
+ }

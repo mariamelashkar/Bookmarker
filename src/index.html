@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>BookMark</title>
+  </head>
+
+  <body class="font-bodyFont">
+    <nav class="p-5">
+      <div class="navbar">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl text-primary">
+            <div class="title text-center justify-center m-0">
+              <div class="main-title text-5xl font-extrabold font-headingFont">
+                <h1 class="font-headingFont mb-1">Bookmarker</h1>
+                <h4 class="sub-title font-bold text-secondary mr-2">
+                  ⭐ Bookmark your favorite sites 🎉
+                </h4>
+              </div>
+            </div></a
+          >
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control p-2">
+            <input
+              type="text"
+              placeholder="Search"
+              class="input input-bordered w-24 md:w-auto"
+            />
+          </div>
+          <button class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+          <div class="navbar">
+            <div class="navbar-end">
+              <div class="dropdown">
+                <div class="drawer-content">
+                  <label
+                    for="my-drawer-4"
+                    class="btn text-secondary font-bodyFont px-5 mx-10"
+                    >Your list</label
+                  >
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                >
+                  <li><a>Homepage</a></li>
+                  <li><a>Portfolio</a></li>
+                  <li><a>About</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="mark-table">
+        <div class="container">
+
+    <!-- Sidebar -->
+    <div class="drawer">
+      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-side">
+        <label for="my-drawer-4" class="drawer-overlay"></label>
+          <ul
+          class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
+        >            
+
+          <li><a>🔗Sidebar Item 1 <button class="btn rounded text-primary px-5 mx-10">Delete</button></a>  
+          </li>
+          <li><a>Sidebar Item 2</a></li>
+        </ul>
+  
+   
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </section>
+      <section id="mark-form">
+        <div class="container p-11">
+          <label class="form-control">
+            <div class="label font-headingFont text-secondary">
+              🏷️ Site Name
+            </div>
+            <input
+              type="text"
+              placeholder="Type here"
+              class="input input-bordered w-100"
+            />
+            <div class="label"></div>
+          </label>
+          <label class="form-control">
+            <div class="label font-headingFont text-secondary">🌐 Site URL</div>
+            <input
+              type="text"
+              placeholder="Type here"
+              class="input input-bordered w-100"
+            />
+            <div class="label"></div>
+          </label>
+          <div class="text-primary mt-11">
+            <button class="btn">Submit</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
