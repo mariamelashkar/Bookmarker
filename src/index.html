@@ -46,56 +46,12 @@
               />
             </svg>
           </button>
-          <div class="navbar">
-            <div class="navbar-end">
-              <div class="dropdown">
-                <div class="drawer-content">
-                  <label
-                    for="my-drawer-4"
-                    class="btn text-secondary font-bodyFont px-5 mx-10"
-                    >Your list</label
-                  >
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-                >
-                  <li><a>Homepage</a></li>
-                  <li><a>Portfolio</a></li>
-                  <li><a>About</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <div class="navbar"></div>
         </div>
       </div>
     </nav>
 
     <main>
-      <section id="mark-table">
-        <div class="container">
-
-    <!-- Sidebar -->
-    <div class="drawer">
-      <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-side">
-        <label for="my-drawer-4" class="drawer-overlay"></label>
-          <ul
-          class="menu bg-base-200 text-base-content min-h-full w-80 p-4"
-        >            
-
-          <li><a>🔗Sidebar Item 1 <button class="btn rounded text-primary px-5 mx-10">Delete</button></a>  
-          </li>
-          <li><a>Sidebar Item 2</a></li>
-        </ul>
-  
-   
-      </div>
-    </div>
-  </div>
-</div>
-        </div>
-      </section>
       <section id="mark-form">
         <div class="container p-11">
           <label class="form-control">
@@ -103,26 +59,64 @@
               🏷️ Site Name
             </div>
             <input
+              id="bookmarkName"
               type="text"
               placeholder="Type here"
               class="input input-bordered w-100"
+              oninput="siteNameValidation()"
             />
+            <div
+              id="alertDiv-name"
+              class="alret bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded relative mt-1"
+              role="alert"
+            >
+              <strong class="font-bold">Error!</strong>
+              <span class="block sm:inline">Please enter a valid name.</span>
+            </div>
             <div class="label"></div>
           </label>
           <label class="form-control">
             <div class="label font-headingFont text-secondary">🌐 Site URL</div>
             <input
+              id="bookmarkUrl"
               type="text"
               placeholder="Type here"
-              class="input input-bordered w-100"
+              class="input input-bordered w-100 border
+              focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-green-500
+              valid:border-green-500 valid:ring-green-400
+              invalid:border-red-500 invalid:ring-red-400" oninput="siteUrlValidation()"
             />
+            <div
+              id="alertDiv-url"
+              class="bg-red-100 border border-red-400 text-red-700 px-4 py-2 rounded relative mt-1"
+              role="alert"
+            >
+              <strong class="font-bold">Error!</strong>
+              <span class="block sm:inline">Please enter a valid Url.</span>
+            </div>
             <div class="label"></div>
           </label>
           <div class="text-primary mt-11">
-            <button class="btn">Submit</button>
+            <button class="btn" onclick="addBookmark()">Submit</button>
           </div>
         </div>
       </section>
+      <section>
+        <div class="table-container container">
+          <table class="table text-center">
+            <!-- head -->
+            <thead>
+              <tr>
+                <th>Site Name</th>
+                <th>Site Url</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </section>
     </main>
+    <script src="./main.js"></script>
   </body>
 </html>
